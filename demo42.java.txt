@@ -1,0 +1,35 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        
+        // lIST = WILL ALLOW DUPLICATES VALUE
+        // ArrayList 
+        // LinkedList a1= new LinkedList();
+        // Vector a1 = new Vector<>(); legacy class : old class : 1995: limited methods
+        // Stack a1 = new stack<>();
+        // set
+        // HashSet a1 = new HashSet<>();  // no DUPLICATES
+        // Linkdedlist a1 = new linkedList<>(); // no duplicates + user entered oUnsupportedOperationException
+        TreeSet a1 = new TreeSet();  // no duplicates + sorted order.
+        // a1.add(100);
+        // a1.add(100);
+        // a1.add(200);
+        // a1.add(200);
+        // a1.add(300);
+        // a1.add(400);
+        // a1.add(500);
+        // a1.add(500);
+        // a1.add(600);
+        
+        a1.add("ABC");
+        a1.add("PQR");
+        a1.add("DEF");
+        a1.add("HIJ");
+        a1.add("BCD");
+        
+        Iterator i = a1.iterator();
+        while (i.hasNext()) {
+            System.out.println(i.next());
+        }
+    }
+}

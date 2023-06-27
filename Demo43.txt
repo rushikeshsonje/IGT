@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        
+        // lIST = WILL ALLOW DUPLICATES VALUE
+        // ArrayList 
+        // LinkedList a1= new LinkedList();
+        // Vector a1 = new Vector<>(); legacy class : old class : 1995: limited methods
+        // Stack a1 = new stack<>();
+        // set
+        // HashSet a1 = new HashSet<>();  // no DUPLICATES
+        // Linkdedlist a1 = new linkedList<>(); // no duplicates + user entered oUnsupportedOperationException
+        // TreeSet a1 = new TreeSet();  // no duplicates + sorted order.
+        TreeMap map = new TreeMap<>();
+        
+        map.put(11, "varun");
+        map.put(12, "Sagar");
+        map.put(13, "Amar");
+        map.put(15, "Pratham");
+        map.put(14, "Shruti");
+        map.put(11, "Rushi");
+        map.put(19, "Rohit");
+        
+        Set s = map.entrySet();
+        Iterator i = s.iterator();
+        while (i.hasNext()) {
+            System.out.println(i.next());
+        }
+    }
+}
