@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function abc() {
+            firstname = document.form1.fn.value;
+            lastname = document.form1.ln.value;
+            full = firstname + " " + lastname;
+            document.form1.full.value = full;
+        }
+
+        function add() {
+            a = parseInt(document.form2.a.value);
+            b = parseInt(document.form2.b.value);
+            result = a +b;
+            document.form2.Result.value = result;
+        }
+        function sub() {
+            a = parseInt(document.form2.a.value);
+            b = parseInt(document.form2.b.value);
+            result = a -b;
+            document.form2.Result.value = result;
+        }
+        function mul() {
+            a = parseInt(document.form2.a.value);
+            b = parseInt(document.form2.b.value);
+            result = a *b;
+            document.form2.Result.value = result;
+        }
+        function div() {
+            a = parseInt(document.form2.a.value);
+            b = parseInt(document.form2.b.value);
+            result = a /b;
+            document.form2.Result.value = result;
+        }
+
+        function cal(value) {
+            a = parseInt(document.form3.a.value);
+            b = parseInt(document.form3.b.value);
+            if(value == "add") {
+                result = a +b;
+                document.form3.Result.value = result;
+            }
+            else if( value == 'sub') {
+                result = a -b;
+                document.form3.Result.value = result;
+            }
+            else if( value == 'mul') {
+                result = a *b;
+                document.form3.Result.value = result;
+            }
+            else if( value == 'div') {
+                result = a /b;
+                document.form3.Result.value = result;
+            }
+        }
+     
+    </script>
+</head>
+<body bgcolor="red">
+    <div style="text-align: center; margin-top: 8rem;">
+        <h1>Welcome to Web Application</h1>
+        <form name="form1">
+            First Name: <input name = 'fn' type="text"><br>
+            Last Name: <input name="ln" type="text"><br>
+            Full Name: <input name="full" type="text"><br>
+            <input type="button" value="Login" onclick="abc()">
+        </form>
+
+        <form name="form2">
+            Value 1: <input name = 'a' type="text"><br>
+            Value 2: <input name="b" type="text"><br>
+            Result: <input name="Result" type="text"><br>
+            <input type="button" value="Add" onclick="add()">
+            <input type="button" value="sub" onclick="sub()">
+            <input type="button" value="mul" onclick="mul()">
+            <input type="button" value="div" onclick="div()">
+        </form>
+        
+        <form name="form3">
+            Value 1: <input name ="a" type="text"><br>
+            Value 2: <input name="b" type="text"><br>
+            Result: <input name="Result" type="text"><br>
+            <input type="button" value="add" onclick="cal(value)">
+            <input type="button" value="sub" onclick="cal(value)">
+            <input type="button" value="mul" onclick="cal(value)">
+            <input type="button" value="div" onclick="cal(value)">
+        </form>
+    </div>
+</body>
+</html>
